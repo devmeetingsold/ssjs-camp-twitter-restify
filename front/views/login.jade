@@ -1,0 +1,11 @@
+h1 Zaloguj się do Cheester'a
+
+form(action='/login', method="post")
+    p
+        label(for='username') Username:
+        input(id="username",name='username')
+    p
+        label(for='password') Password:
+        input(id="password",name='password')
+    p
+        input(type="submit", value="Login")

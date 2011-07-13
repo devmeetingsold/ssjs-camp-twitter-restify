@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cheester</title>
+	<style>
+		body {
+			font-family: 'Trebuchet MS';
+			width: 40em;
+			margin: 0 auto;
+		}
+		header {
+			padding: 1em;
+			background: #EB0;
+			color: #FFF;
+			margin-bottom: 1em;
+		}
+		header > p {
+			margin: 0;
+		}
+
+		.tweet_form > textarea {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			width: 100%;
+			height: 4em;
+			border: solid 3px #EB0;
+			box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+		}
+		.tweet_form button {
+			display: block;
+			width: 50%;
+			margin: 0.5em auto;
+			padding: 0.5em 0;
+		}
+
+		.tweet {
+			background: #EEE;
+			padding: 0.5em;
+			margin-bottom: 0.5em;
+		}
+	</style>
+</head>
+<body>	
+	<header>
+		<h1>Cheester</h1>
+		<p>
+			Name: <input type="text" id="login_user">
+			Password: <input type="password" id="login_pass">
+			<button id="login_submit">Cheesin</button>
+		</p>
+	</header>
+	<div class="tweet_form">
+		<textarea cols="40" rows="10" id="tweet_content"></textarea>
+		<button id="tweet_submit">Tweet</button>
+	</div>
+	<section class="tweets">
+		<h2>Tweets</h2>
+		<div id="tweets_list">
+		</div>
+	</section>
+	<script src="prototype.js"></script>
+	<script src="cheester.js"></script>
+	<script>this.app.Cheester.init();</script>
+</body>
+</html>

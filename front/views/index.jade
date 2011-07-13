@@ -1,0 +1,42 @@
+h1 You're looking at profile of: #{profile_name}
+
+div#timeline
+    h1 Post update
+
+    form(action='/tweet', method="post")
+        p
+            textarea(name='tweet')
+        p
+            input(type="submit", value="Post")
+
+
+
+    h1 Timeline
+    - if (tweets.length)
+        - each item in tweets
+          li
+            p 
+                | #{item.tweet}
+    - else 
+        p no tweets
+div#following
+    h1 Users that #{profile_name} follow:
+    - if (following.length)
+        - each person in following
+          li
+            a(href="/u/#{person}")= person
+               
+    - else 
+        p User #{profile_name} is not following anyone
+    
+div#all 
+    h1 Users in system
+    - if (users.length)
+           - each person in users
+             li
+               a(href="/u/#{person}")= person
+               | :
+               a(href="/follow/#{person}") Follow that user
+
+       - else 
+           p No users in system

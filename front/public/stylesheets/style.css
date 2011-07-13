@@ -1,0 +1,23 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+form label {
+    display: inline-block;
+    width: 100px;
+}
+
+textarea {
+    width: 400px;
+    height: 100px;
+}
+
+div {
+    width: 49%;
+    float: left;
+}
